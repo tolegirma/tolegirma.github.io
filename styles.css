@@ -62,10 +62,13 @@ body {
     background-image: url('images/control-system-background.jpg');
     background-size: cover;
     background-position: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-text {
     z-index: 2;
+    max-width: 800px;
 }
 
 .hero-text h1 {
@@ -85,10 +88,18 @@ body {
 
 .hero-text .motivational-text {
     font-family: 'CMU Serif', serif;
-    font-size: 1.2em;
+    font-size: 2em; /* Increased font size for more impact */
+    font-weight: bold;
     font-style: italic;
     color: #555;
     margin-bottom: 20px;
+}
+
+.hero-text .intro {
+    font-family: 'CMU Serif', serif;
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 30px;
 }
 
 .hero .btn {
