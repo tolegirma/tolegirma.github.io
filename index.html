@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Tolera Girma — Curriculum Vitae</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Curriculum Vitae — Tolera Girma, Control Engineer" />
+  <!-- LaTeX-like serif (fallback). Replace with Latin Modern self-host later -->
+  <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cv.css" />
+</head>
+<body>
+  <main id="cv" role="main" aria-label="Curriculum Vitae">
+    <!-- Header -->
+    <header class="cv-header">
+      <h1>Tolera Girma</h1>
+      <p class="contact">
+        Bielsko-Biała, Poland • <a href="mailto:you@example.com">you@example.com</a> • +48 000 000 000 •
+        <a href="https://www.linkedin.com/in/your-link" target="_blank" rel="noopener">linkedin.com/in/your-link</a> •
+        <a href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener">github.com/YOUR-USERNAME</a>
+      </p>
+    </header>
+
+    <!-- Section: Education -->
+    <section class="row">
+      <h2 class="rail">EDUCATION</h2>
+      <div class="content">
+        <div class="item">
+          <div class="item-head">
+            <strong>M.Sc., Mechanical Engineering</strong> — [Your University], [City, Country]
+            <span class="date">[Year]</span>
+          </div>
+          <ul class="bullets">
+            <li>Focus: Control systems, dynamics, materials.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-head">
+            <strong>B.Sc., Mechanical Engineering</strong> — [Your University], [City, Country]
+            <span class="date">[Year]</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Experience -->
+    <section class="row">
+      <h2 class="rail">PROFESSIONAL EXPERIENCE</h2>
+      <div class="content">
+        <div class="item">
+          <div class="item-head">
+            <strong>Control Engineer — Function & Controls</strong>, ZF Group, Bielsko-Biała
+            <span class="date">Apr 2025 – Present</span>
+          </div>
+          <ul class="bullets">
+            <li>Developed <em>Steering Position Control Oscillation Stability Monitor (SPC OSM)</em> for EVA2; improved robustness to road- vs. instability-induced oscillations.</li>
+            <li>Simulation-based validation (MIL/SIL), parameterization from measurement datasets (FRA rigs, test tracks).</li>
+            <li>Compliance (Polyspace, MISRA) and justifications for CQA acceptance.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-head">
+            <strong>System Simulation Engineer</strong>, ZF Group, Bielsko-Biała
+            <span class="date">Sep 2022 – Mar 2025</span>
+          </div>
+          <ul class="bullets">
+            <li>Built a <em>6-DOF rack & ball-nut model</em> for steering analysis; nonlinear stiffness with compliance lash.</li>
+            <li>Evaluated friction models (Dahl, LuGre) and damping; supported HOD tuning and FMM features.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Research / Projects -->
+    <section class="row">
+      <h2 class="rail">PROJECTS</h2>
+      <div class="content">
+        <div class="item compact">
+          <div class="item-head">
+            <strong>SPC Oscillation Monitor</strong>
+            <span class="date">2025</span>
+          </div>
+          <p>Variance-based frequency windows to separate road vs. instability oscillations; MIL/SIL validated.</p>
+        </div>
+        <div class="item compact">
+          <div class="item-head">
+            <strong>HOD Tuning (Renault)</strong>
+            <span class="date">2024–2025</span>
+          </div>
+          <p>8-ms execution alignment, offset/friction tolerance study, measurement-driven calibration.</p>
+        </div>
+        <div class="item compact">
+          <div class="item-head">
+            <strong>Rack & Ball-Nut 6-DOF Model</strong>
+            <span class="date">2023–2024</span>
+          </div>
+          <p>Used internally for system-level studies and parameter sensitivity analysis.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Skills -->
+    <section class="row">
+      <h2 class="rail">SKILLS</h2>
+      <div class="content">
+        <p><strong>Control & Modeling:</strong> PID, observers, stability/oscillation monitoring, signal processing (filters, Bode/PSD).</p>
+        <p><strong>Toolchain:</strong> MATLAB/Simulink, TargetLink, Polyspace, BTC EmbeddedPlatform, CANape/CANalyzer, AUTOSAR (ARXML).</p>
+        <p><strong>ALM & VC:</strong> Integrity, Windchill, Azure DevOps, Git.</p>
+        <p><strong>Languages:</strong> English (B2→C1), Polish (basic).</p>
+      </div>
+    </section>
+
+    <!-- Section: Awards / Certifications -->
+    <section class="row">
+      <h2 class="rail">CERTIFICATIONS & AWARDS</h2>
+      <div class="content">
+        <ul class="bullets">
+          <li>Polyspace / MISRA workshop (Year).</li>
+          <li>AUTOSAR Basics (Year).</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section: Publications (optional) -->
+    <!--
+    <section class="row">
+      <h2 class="rail">PUBLICATIONS</h2>
+      <div class="content">
+        <ol class="pubs">
+          <li>T. Girma, et al., “Title…”, Journal, Year.</li>
+        </ol>
+      </div>
+    </section>
+    -->
+
+    <!-- Footer -->
+    <footer class="cv-footer">
+      <span>Last updated: <span id="updated"></span></span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('updated').textContent = new Date().toLocaleDateString();
+  </script>
+</body>
+</html>
