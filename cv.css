@@ -1,121 +1,59 @@
-/* ====== Optional: self-host Latin Modern (true LaTeX look) ======
-   1) Upload lmroman-regular.woff2 and lmroman-bold.woff2 to /fonts/
-   2) Uncomment the @font-face blocks and set --serif to "LM Roman".
-------------------------------------------------------------------- */
-/*
-@font-face{
-  font-family: "LM Roman";
-  src: url("fonts/lmroman-regular.woff2") format("woff2");
-  font-weight: 400; font-style: normal; font-display: swap;
-}
-@font-face{
-  font-family: "LM Roman";
-  src: url("fonts/lmroman-bold.woff2") format("woff2");
-  font-weight: 700; font-style: normal; font-display: swap;
-}
-*/
-
 :root{
-  --serif: "LM Roman", "STIX Two Text", "Times New Roman", Times, serif;
-  --text: #111;
-  --muted: #444;
-  --rail: #000;
-  --rule: #bbb;
-  --maxw: 800px;  /* text width similar to LaTeX article */
+  --bg:#0b1020; --fg:#e5e7eb; --muted:#98a2b3; --card:#11162a; --border:#1e2a45; --accent:#7aa2ff;
+}
+:root[data-theme="light"]{
+  --bg:#ffffff; --fg:#0f172a; --muted:#475569; --card:#f8fafc; --border:#e2e8f0; --accent:#2563eb;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
+.wrap{max-width:1050px;margin:0 auto;padding:0 20px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.muted{color:var(--muted)}
+.small{font-size:.92rem}
+
+/* Nav */
+.nav{position:sticky;top:0;backdrop-filter:saturate(180%) blur(10px);background:color-mix(in oklab, var(--bg) 92%, transparent);border-bottom:1px solid var(--border);z-index:50}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.brand{font-weight:800;letter-spacing:.3px}
+.brand span{opacity:.8;margin-left:2px}
+.links{display:flex;gap:16px;align-items:center}
+.links a{padding:6px 0}
+#theme-toggle{border:1px solid var(--border);background:transparent;color:var(--fg);border-radius:10px;padding:6px 10px;cursor:pointer}
+
+/* Hero */
+.hero{padding:44px 0 8px;border-bottom:1px solid var(--border)}
+.hero-grid{display:grid;gap:18px;grid-template-columns:1fr;align-items:start}
+.hero h1{font-size:2.1rem;line-height:1.2;margin:.2rem 0 .6rem}
+.lead{font-size:1.06rem;color:var(--muted);max-width:65ch}
+.cta{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:10px 14px;border-radius:12px;background:var(--accent);color:#fff;border:1px solid transparent;font-weight:700}
+.btn.ghost{background:transparent;color:var(--fg);border-color:var(--border)}
+.hero-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:14px}
+
+/* Sections */
+.section{padding:24px 0;border-bottom:1px solid var(--border)}
+.section h2{font-size:1.4rem;margin:0 0 8px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
+.job{margin:10px 0}
+.job header{display:flex;gap:12px;flex-wrap:wrap;align-items:baseline;justify-content:space-between;margin-bottom:6px}
+.job ul{margin:6px 0 0 0;padding-left:18px}
+.job li{margin:.25rem 0}
+
+.grid{display:grid;gap:14px}
+.grid.two{grid-template-columns:1fr}
+.grid.three{grid-template-columns:1fr}
+@media(min-width:860px){
+  .hero-grid{grid-template-columns:1.4fr .8fr}
+  .grid.two{grid-template-columns:1fr 1fr}
+  .grid.three{grid-template-columns:1fr 1fr 1fr}
 }
 
-html { font-size: 16px; }
-body {
-  margin: 0;
-  color: var(--text);
-  font-family: var(--serif);
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  background: #fff;
-}
-
-#cv {
-  max-width: var(--maxw);
-  margin: 36px auto 56px;
-  padding: 0 24px;
-}
-
-.cv-header {
-  text-align: center;
-  margin-bottom: 18px;
-}
-.cv-header h1 {
-  font-weight: 700;
-  font-size: 2.1rem;        /* big name like LaTeX title */
-  margin: 0 0 6px;
-  letter-spacing: .2px;
-}
-.cv-header .contact {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.97rem;
-}
-.cv-header a { color: inherit; text-decoration: none; border-bottom: 0.5px solid #ccc; }
-.cv-header a:hover { border-bottom-color: #000; }
-
-/* Two-column section rows: left rail + right content */
-.row {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 18px;
-  padding: 14px 0;
-  border-top: 1px solid var(--rule);
-}
-.row:first-of-type { border-top: 1.5px solid var(--rail); }
-.rail {
-  margin: 0;
-  font-variant-caps: small-caps;
-  letter-spacing: .6px;
-  color: var(--rail);
-  font-weight: 700;
-  align-self: start;
-  padding-top: 2px;
-}
-.content { padding-top: 2px; }
-
-/* Items and dates */
-.item { margin: 0 0 12px; }
-.item-head {
-  display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap;
-  font-size: 1.02rem;
-}
-.item-head .date {
-  margin-left: auto;
-  color: var(--muted);
-  font-size: 0.96rem;
-  white-space: nowrap;
-}
-
-/* Tight bullets like LaTeX */
-.bullets { margin: 4px 0 0 0; padding-left: 18px; }
-.bullets li { margin: 2px 0; }
-.compact p { margin: 4px 0 0 0; }
-
-/* Publications (numbered, nice spacing) */
-.pubs { margin: 6px 0 0 0; padding-left: 22px; }
-.pubs li { margin: 4px 0; }
+/* Tiles */
+.tile{background:var(--card);border:1px dashed var(--border);border-radius:14px;padding:14px}
+.bullets{margin:0;padding-left:18px}
+.bullets li{margin:.25rem 0}
 
 /* Footer */
-.cv-footer {
-  margin-top: 12px;
-  text-align: right;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-/* Links minimal */
-a { color: inherit; text-decoration: none; }
-a:hover { text-decoration: underline; }
-
-/* Print styles (A4, tidy margins) */
-@page { size: A4; margin: 18mm 16mm; }
-@media print {
-  #cv { margin: 0; padding: 0; }
-  .row { break-inside: avoid; }
-  a { text-decoration: none; }
-}
+.foot{padding:16px 0}
+.foot .wrap{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--border);padding-top:12px}
