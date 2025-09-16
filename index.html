@@ -1,134 +1,394 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Tolera Girma — Control Engineer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Control Engineer specializing in automotive systems, SPC OSM, HOD tuning, and simulation-driven validation." />
-  <meta name="theme-color" content="#0d1117" />
-
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Engineering Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .hero-pattern {
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
 </head>
-<body>
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="wrap">
-      <a href="#top" class="logo">TG<span>.</span></a>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <section id="top" class="hero">
-    <div class="wrap">
-      <h1 class="fade-in">Hi, I’m <span class="highlight">Tolera Girma</span></h1>
-      <p class="fade-in delay1">Control Engineer · Automotive Systems · Simulation & Software</p>
-      <div class="buttons fade-in delay2">
-        <a class="btn" href="cv.pdf" target="_blank">📄 Download CV</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/your-link" target="_blank">LinkedIn</a>
-        <a class="btn ghost" href="https://github.com/YOUR-USERNAME" target="_blank">GitHub</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="wrap glass">
-      <h2>About Me</h2>
-      <p>
-        I’m a Control Engineer with a mechanical engineering background, working at the intersection of
-        <strong>simulation</strong> and <strong>production software</strong>. I design robust control
-        functions, validate them with measurement data, and deliver safe, reliable steering systems.
-      </p>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experience" class="section">
-    <div class="wrap">
-      <h2>Experience</h2>
-      <div class="timeline">
-        <div class="entry glass">
-          <h3>Control Engineer — Function & Controls</h3>
-          <span class="date">ZF Group · Apr 2025 – Present</span>
-          <ul>
-            <li>Developed <strong>SPC OSM</strong> for EVA2 (oscillation monitor for steering stability).</li>
-            <li>Validated via MIL/SIL & measurement parameterization (FRA, test tracks).</li>
-            <li>Ensured compliance with MISRA using Polyspace & CQA reviews.</li>
-          </ul>
+<body class="font-sans antialiased text-gray-800 bg-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold gradient-text">ControlEng</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-blue-500 transition">About</a>
+                    <a href="#experience" class="text-gray-600 hover:text-blue-500 transition">Experience</a>
+                    <a href="#projects" class="text-gray-600 hover:text-blue-500 transition">Projects</a>
+                    <a href="#blog" class="text-gray-600 hover:text-blue-500 transition">Blog</a>
+                    <a href="resources.html" class="text-gray-600 hover:text-blue-500 transition">Resources</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-500 transition">Contact</a>
+                </div>
+                <button class="md:hidden">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
         </div>
-        <div class="entry glass">
-          <h3>System Simulation Engineer</h3>
-          <span class="date">ZF Group · Sep 2022 – Mar 2025</span>
-          <ul>
-            <li>Built <strong>6-DOF rack & ball-nut model</strong> for steering system studies.</li>
-            <li>Implemented nonlinear friction & damping models (Dahl, LuGre).</li>
-            <li>Supported HOD tuning & FMM feature validation.</li>
-          </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern pt-32 pb-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm <span class="gradient-text">Alex</span></h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-gray-600 mb-6">Control Systems Engineer</h2>
+                    <p class="text-lg text-gray-600 mb-8 max-w-lg">Specializing in automation, robotics, and industrial control systems with 8+ years of experience optimizing manufacturing processes.</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition shadow-md">Get in Touch</a>
+                        <a href="#projects" class="px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition">View Projects</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                            <img src="http://static.photos/technology/640x360/42" alt="Profile" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-white p-3 rounded-full shadow-lg">
+                            <i data-feather="award" class="text-blue-500 w-6 h-6"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <div class="wrap">
-      <h2>Highlighted Projects</h2>
-      <div class="grid">
-        <div class="card glass">
-          <h3>SPC Oscillation Monitor</h3>
-          <p>Variance-based frequency windows to separate road vs instability oscillations, MIL/SIL validated with track data.</p>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0" data-aos="fade-right">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                        <h3 class="text-xl font-semibold mb-4">Expertise</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <i data-feather="check-circle" class="text-green-500 mr-2"></i>
+                                <span>Industrial Automation</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check-circle" class="text-green-500 mr-2"></i>
+                                <span>PLC Programming</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check-circle" class="text-green-500 mr-2"></i>
+                                <span>Robotic Systems</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i data-feather="check-circle" class="text-green-500 mr-2"></i>
+                                <span>Process Optimization</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12" data-aos="fade-left">
+                    <p class="text-lg text-gray-600 mb-6">I'm a passionate control engineer with extensive experience designing and implementing automation solutions for manufacturing environments. My approach combines technical expertise with practical problem-solving to deliver reliable, efficient systems.</p>
+                    <p class="text-lg text-gray-600 mb-6">With a Master's degree in Control Engineering and numerous industry certifications, I've helped companies reduce downtime by 30% and increase production efficiency by 25% through innovative control strategies.</p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                        <div class="text-center p-4 bg-gray-50 rounded-lg">
+                            <i data-feather="cpu" class="w-8 h-8 mx-auto text-blue-500 mb-2"></i>
+                            <span class="font-medium">PLC Systems</span>
+                        </div>
+                        <div class="text-center p-4 bg-gray-50 rounded-lg">
+                            <i data-feather="activity" class="w-8 h-8 mx-auto text-blue-500 mb-2"></i>
+                            <span class="font-medium">PID Control</span>
+                        </div>
+                        <div class="text-center p-4 bg-gray-50 rounded-lg">
+                            <i data-feather="code" class="w-8 h-8 mx-auto text-blue-500 mb-2"></i>
+                            <span class="font-medium">SCADA</span>
+                        </div>
+                        <div class="text-center p-4 bg-gray-50 rounded-lg">
+                            <i data-feather="git-merge" class="w-8 h-8 mx-auto text-blue-500 mb-2"></i>
+                            <span class="font-medium">HMI Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="card glass">
-          <h3>HOD Tuning (Renault)</h3>
-          <p>Execution alignment at 8 ms cycle, offset & friction tolerance calibration with real-world measurement data.</p>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">Professional Experience</h2>
+            <div class="space-y-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition" data-aos="fade-up">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                        <div>
+                            <h3 class="text-xl font-semibold">Senior Control Engineer</h3>
+                            <p class="text-blue-600">Industrial Automation Solutions</p>
+                        </div>
+                        <div class="mt-2 md:mt-0">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">2020 - Present</span>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-600">Leading a team of engineers to develop advanced control systems for automotive manufacturing clients. Implemented predictive maintenance algorithms reducing downtime by 35%.</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Siemens PLC</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Robot Programming</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Digital Twins</span>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition" data-aos="fade-up">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                        <div>
+                            <h3 class="text-xl font-semibold">Control Systems Engineer</h3>
+                            <p class="text-blue-600">Precision Manufacturing Co.</p>
+                        </div>
+                        <div class="mt-2 md:mt-0">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">2016 - 2020</span>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-600">Designed and implemented PLC-based control systems for CNC machines, improving production accuracy by 22%. Developed custom HMI interfaces for operator efficiency.</p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Rockwell Automation</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Motion Control</span>
+                        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Safety Systems</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="card glass">
-          <h3>Rack & Ball-Nut 6-DOF</h3>
-          <p>Advanced nonlinear stiffness model adopted for internal steering performance studies.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition" data-aos="fade-up">
+                    <img src="http://static.photos/industry/640x360/101" alt="Automation System" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Automated Assembly Line</h3>
+                        <p class="text-gray-600 mb-4">Complete redesign of control system for automotive parts assembly, reducing cycle time by 18%.</p>
+                        <a href="#" class="text-blue-500 hover:text-blue-700 flex items-center">
+                            <span>View Details</span>
+                            <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
+                    <img src="http://static.photos/technology/640x360/102" alt="Robotic System" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Packaging Robot Integration</h3>
+                        <p class="text-gray-600 mb-4">Custom robotic cell with vision system for flexible packaging applications.</p>
+                        <a href="#" class="text-blue-500 hover:text-blue-700 flex items-center">
+                            <span>View Details</span>
+                            <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="200">
+                    <img src="http://static.photos/industry/640x360/103" alt="Control Panel" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Energy Monitoring System</h3>
+                        <p class="text-gray-600 mb-4">Real-time energy consumption tracking with predictive analytics for industrial plants.</p>
+                        <a href="#" class="text-blue-500 hover:text-blue-700 flex items-center">
+                            <span>View Details</span>
+                            <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition inline-flex items-center">
+                    <span>View All Projects</span>
+                    <i data-feather="chevron-down" class="ml-2 w-4 h-4"></i>
+                </a>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="section">
-    <div class="wrap glass">
-      <h2>Skills</h2>
-      <ul class="skills">
-        <li>Control Design (PID, Observers, Stability/OSM)</li>
-        <li>Signal Processing (Filters, Bode/PSD)</li>
-        <li>MATLAB/Simulink, TargetLink, Polyspace</li>
-        <li>AUTOSAR, BTC EmbeddedPlatform</li>
-        <li>Azure DevOps, Git, Integrity, Windchill</li>
-      </ul>
-    </div>
-  </section>
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">Latest Articles</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition" data-aos="fade-up">
+                    <div class="flex items-center mb-4">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Control Theory</span>
+                        <span class="text-gray-500 text-sm ml-auto">May 15, 2023</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Advanced PID Tuning Techniques</h3>
+                    <p class="text-gray-600 mb-4">Exploring modern approaches to PID controller tuning for non-linear systems in industrial applications.</p>
+                    <a href="#" class="text-blue-500 hover:text-blue-700 flex items-center">
+                        <span>Read Article</span>
+                        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Industry 4.0</span>
+                        <span class="text-gray-500 text-sm ml-auto">April 2, 2023</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Implementing Digital Twins in Manufacturing</h3>
+                    <p class="text-gray-600 mb-4">Practical guide to creating and utilizing digital twins for predictive maintenance and process optimization.</p>
+                    <a href="#" class="text-blue-500 hover:text-blue-700 flex items-center">
+                        <span>Read Article</span>
+                        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition inline-flex items-center">
+                    <span>View All Articles</span>
+                    <i data-feather="chevron-down" class="ml-2 w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <div class="wrap glass">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-      <p class="muted">References available on request.</p>
-    </div>
-  </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">Get In Touch</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i data-feather="mail" class="text-blue-500 mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-medium">Email</h4>
+                                <p class="text-gray-600">contact@controleng.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-feather="phone" class="text-blue-500 mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-medium">Phone</h4>
+                                <p class="text-gray-600">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-feather="map-pin" class="text-blue-500 mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-medium">Location</h4>
+                                <p class="text-gray-600">Boston, MA</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold mb-6">Connect With Me</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-blue-100 transition">
+                                <i data-feather="linkedin" class="text-blue-600"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-blue-100 transition">
+                                <i data-feather="github" class="text-gray-700"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-blue-100 transition">
+                                <i data-feather="twitter" class="text-blue-400"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition shadow-md w-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="wrap">
-      © <span id="year"></span> Tolera Girma — Built with 💙 on GitHub Pages
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-xl font-bold gradient-text">ControlEng</span>
+                    <p class="text-gray-400 mt-2">Engineering solutions for the modern industry</p>
+                </div>
+                <div class="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0">
+                    <a href="#about" class="text-gray-400 hover:text-white transition">About</a>
+                    <a href="#experience" class="text-gray-400 hover:text-white transition">Experience</a>
+                    <a href="#projects" class="text-gray-400 hover:text-white transition">Projects</a>
+                    <a href="#blog" class="text-gray-400 hover:text-white transition">Blog</a>
+                    <a href="resources.html" class="text-gray-400 hover:text-white transition">Resources</a>
+                    <a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 Control Engineering Portfolio. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="github"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i data-feather="twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+        
+        // Mobile menu toggle
+        document.querySelector('button.md\\:hidden').addEventListener('click', function() {
+            const nav = document.querySelector('.hidden.md\\:flex');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+            nav.classList.toggle('flex-col');
+            nav.classList.toggle('absolute');
+            nav.classList.toggle('top-16');
+            nav.classList.toggle('left-0');
+            nav.classList.toggle('right-0');
+            nav.classList.toggle('bg-white');
+            nav.classList.toggle('p-4');
+            nav.classList.toggle('space-y-4');
+            nav.classList.toggle('space-x-8');
+            nav.classList.toggle('border-b');
+            nav.classList.toggle('border-gray-100');
+        });
+    </script>
 </body>
 </html>
