@@ -5,84 +5,46 @@
   <title>Tolera Girma — Control Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Control Engineer specializing in automotive systems, SPC OSM, HOD tuning, and simulation-driven validation." />
-  <meta name="theme-color" content="#0b1020" />
+  <meta name="theme-color" content="#0d1117" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Tolera Girma — Control Engineer" />
-  <meta property="og:description" content="Automotive control systems, MIL/SIL, Polyspace, TargetLink, SPC OSM, HOD." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://YOUR-USERNAME.github.io/" />
-  <meta property="og:image" content="https://YOUR-USERNAME.github.io/assets/preview.png" />
-
-  <!-- JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Person",
-    "name":"Tolera Girma",
-    "jobTitle":"Control Engineer",
-    "url":"https://YOUR-USERNAME.github.io/",
-    "email":"mailto:you@example.com",
-    "address":{"@type":"PostalAddress","addressCountry":"PL","addressLocality":"Bielsko-Biała"},
-    "sameAs":["https://www.linkedin.com/in/your-link","https://github.com/YOUR-USERNAME"],
-    "knowsAbout":["Control systems","Automotive software","MATLAB/Simulink","Polyspace","TargetLink","BTC EmbeddedPlatform","AUTOSAR","Signal processing","FRA"]
-  }
-  </script>
-
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Ctext x='50%25' y='52%25' font-size='40' text-anchor='middle'%3ETG%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<header class="nav">
-  <div class="wrap">
-    <a class="brand" href="#top">Tolera<span>Girma</span></a>
-    <nav class="links" aria-label="Primary">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-      <button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
-    </nav>
-  </div>
-</header>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="wrap">
+      <a href="#top" class="logo">TG<span>.</span></a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<main id="top">
   <!-- HERO -->
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <h1>Control Engineer<br><span class="muted">Automotive · Simulation · Robust Software</span></h1>
-        <p class="lead">
-          I design and validate control functions for steering systems. Recent work:
-          <strong>SPC Oscillation Stability Monitor (OSM)</strong> for EVA2 and <strong>HOD tuning</strong>.
-        </p>
-        <div class="cta">
-          <a class="btn" href="cv.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
-          <a class="btn ghost" href="https://www.linkedin.com/in/your-link" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn ghost" href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener">GitHub</a>
-        </div>
-      </div>
-      <div class="hero-card">
-        <h3>Quick Facts</h3>
-        <ul>
-          <li>Location: Bielsko-Biała, Poland</li>
-          <li>Tools: MATLAB/Simulink, TargetLink, Polyspace, BTC</li>
-          <li>Domains: SPC, HOD, FMM, AUTOSAR</li>
-          <li>Focus: Robustness, stability, measurement-based validation</li>
-        </ul>
+  <section id="top" class="hero">
+    <div class="wrap">
+      <h1 class="fade-in">Hi, I’m <span class="highlight">Tolera Girma</span></h1>
+      <p class="fade-in delay1">Control Engineer · Automotive Systems · Simulation & Software</p>
+      <div class="buttons fade-in delay2">
+        <a class="btn" href="cv.pdf" target="_blank">📄 Download CV</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/your-link" target="_blank">LinkedIn</a>
+        <a class="btn ghost" href="https://github.com/YOUR-USERNAME" target="_blank">GitHub</a>
       </div>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section id="about" class="section">
-    <div class="wrap">
-      <h2>About</h2>
+    <div class="wrap glass">
+      <h2>About Me</h2>
       <p>
-        I’m a Control Engineer with a mechanical engineering background. I bridge
-        <em>simulation</em> and <em>production software</em>: building models, designing algorithms,
-        and validating them with measurement data to deliver reliable steering performance.
+        I’m a Control Engineer with a mechanical engineering background, working at the intersection of
+        <strong>simulation</strong> and <strong>production software</strong>. I design robust control
+        functions, validate them with measurement data, and deliver safe, reliable steering systems.
       </p>
     </div>
   </section>
@@ -91,49 +53,45 @@
   <section id="experience" class="section">
     <div class="wrap">
       <h2>Experience</h2>
-
-      <article class="card job">
-        <header>
-          <h3>Control Engineer — Function &amp; Controls</h3>
-          <span>ZF Group · Bielsko-Biała · Apr 2025 – Present</span>
-        </header>
-        <ul>
-          <li>Developed <strong>SPC OSM</strong> for EVA2; improved robustness to road- vs instability-induced oscillations.</li>
-          <li>Simulation-based validation (MIL/SIL) and parameterization from FRA/test-track measurements.</li>
-          <li>Compliance & CQA with Polyspace (MISRA justifications) for production quality.</li>
-        </ul>
-      </article>
-
-      <article class="card job">
-        <header>
+      <div class="timeline">
+        <div class="entry glass">
+          <h3>Control Engineer — Function & Controls</h3>
+          <span class="date">ZF Group · Apr 2025 – Present</span>
+          <ul>
+            <li>Developed <strong>SPC OSM</strong> for EVA2 (oscillation monitor for steering stability).</li>
+            <li>Validated via MIL/SIL & measurement parameterization (FRA, test tracks).</li>
+            <li>Ensured compliance with MISRA using Polyspace & CQA reviews.</li>
+          </ul>
+        </div>
+        <div class="entry glass">
           <h3>System Simulation Engineer</h3>
-          <span>ZF Group · Bielsko-Biała · Sep 2022 – Mar 2025</span>
-        </header>
-        <ul>
-          <li>Built a <strong>6-DOF rack & ball-nut</strong> model for system-level analysis and steering performance.</li>
-          <li>Modeled damping, stiffness, nonlinear friction (Dahl, LuGre); supported HOD tuning and FMM features.</li>
-        </ul>
-      </article>
+          <span class="date">ZF Group · Sep 2022 – Mar 2025</span>
+          <ul>
+            <li>Built <strong>6-DOF rack & ball-nut model</strong> for steering system studies.</li>
+            <li>Implemented nonlinear friction & damping models (Dahl, LuGre).</li>
+            <li>Supported HOD tuning & FMM feature validation.</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- PROJECTS -->
   <section id="projects" class="section">
     <div class="wrap">
-      <h2>Selected Projects</h2>
-      <div class="grid three">
-        <div class="tile">
+      <h2>Highlighted Projects</h2>
+      <div class="grid">
+        <div class="card glass">
           <h3>SPC Oscillation Monitor</h3>
-          <p>Variance-based frequency windows distinguishing road vs instability oscillations; MIL/SIL validated with measurement-driven parameterization.</p>
-          <!-- <a class="mini" href="#" target="_blank">Docs/Slides</a> -->
+          <p>Variance-based frequency windows to separate road vs instability oscillations, MIL/SIL validated with track data.</p>
         </div>
-        <div class="tile">
+        <div class="card glass">
           <h3>HOD Tuning (Renault)</h3>
-          <p>8-ms execution chain alignment; offset/friction tolerance; calibration pipeline based on measurement data.</p>
+          <p>Execution alignment at 8 ms cycle, offset & friction tolerance calibration with real-world measurement data.</p>
         </div>
-        <div class="tile">
+        <div class="card glass">
           <h3>Rack & Ball-Nut 6-DOF</h3>
-          <p>Nonlinear symmetric stiffness + compliance lash model used internally for extended analysis.</p>
+          <p>Advanced nonlinear stiffness model adopted for internal steering performance studies.</p>
         </div>
       </div>
     </div>
@@ -141,69 +99,36 @@
 
   <!-- SKILLS -->
   <section id="skills" class="section">
-    <div class="wrap">
+    <div class="wrap glass">
       <h2>Skills</h2>
-      <div class="grid two">
-        <div class="card">
-          <h3>Core</h3>
-          <ul class="bullets">
-            <li>Control design (PID, observers, oscillation/stability monitoring)</li>
-            <li>Signal processing (filters, Bode/PSD, frequency-domain analysis)</li>
-            <li>AUTOSAR workflow, code quality & MISRA compliance</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Toolchain</h3>
-          <ul class="bullets">
-            <li>MATLAB/Simulink, TargetLink, Polyspace, BTC EmbeddedPlatform</li>
-            <li>Vector/ETAS tools (CANape, CANalyzer), Azure DevOps, Git</li>
-            <li>Integrity, Windchill (ALM/PLM)</li>
-          </ul>
-        </div>
-      </div>
+      <ul class="skills">
+        <li>Control Design (PID, Observers, Stability/OSM)</li>
+        <li>Signal Processing (Filters, Bode/PSD)</li>
+        <li>MATLAB/Simulink, TargetLink, Polyspace</li>
+        <li>AUTOSAR, BTC EmbeddedPlatform</li>
+        <li>Azure DevOps, Git, Integrity, Windchill</li>
+      </ul>
     </div>
   </section>
-
-  <!-- OPTIONAL PUBLICATIONS -->
-  <!--
-  <section id="publications" class="section">
-    <div class="wrap">
-      <h2>Publications</h2>
-      <ol class="pubs">
-        <li>T. Girma, … “Title…”, Journal, 2025.</li>
-      </ol>
-    </div>
-  </section>
-  -->
 
   <!-- CONTACT -->
   <section id="contact" class="section">
-    <div class="wrap">
+    <div class="wrap glass">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-      <p class="muted small">Prefer email. References and portfolio details available on request.</p>
+      <p class="muted">References available on request.</p>
     </div>
   </section>
-</main>
 
-<footer class="foot">
-  <div class="wrap">
-    <span>© <span id="year"></span> Tolera Girma</span>
-    <span class="muted">Last updated: <span id="updated"></span></span>
-  </div>
-</footer>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap">
+      © <span id="year"></span> Tolera Girma — Built with 💙 on GitHub Pages
+    </div>
+  </footer>
 
-<script>
-  // Dark/light toggle
-  const applyTheme = t => document.documentElement.dataset.theme = t;
-  const saved = localStorage.getItem('theme'); if(saved) applyTheme(saved);
-  document.getElementById('theme-toggle').addEventListener('click', () => {
-    const next = (document.documentElement.dataset.theme === 'dark') ? 'light' : 'dark';
-    applyTheme(next); localStorage.setItem('theme', next);
-  });
-  // Footer dates
-  document.getElementById('year').textContent = new Date().getFullYear();
-  document.getElementById('updated').textContent = new Date().toLocaleDateString();
-</script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
